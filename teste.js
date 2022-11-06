@@ -37,6 +37,7 @@ function CriarProjeto() {
     nomeProjeto = prompt("Insira o nome do projeto")
     orcamentoTotal = parseInt(prompt("Insira o orçamento total do projeto"))
 }
+CriarProjeto()
 
 function OrganizarProjeto(nomeProjeto, valor, tipoDeDespesa) {
 
@@ -60,13 +61,11 @@ let continuar = "s"
 
 while (continuar == "s") {
 
-    CriarProjeto()
-    
     let tipoDeDespesa = prompt("Insira o tipo de despesa para seu projeto,  Receita(r) ou Despesa(d)")
     let valor = parseInt(prompt("Insira o valor desejado"))
     OrganizarProjeto(nomeProjeto, valor, tipoDeDespesa)
 
-    console.log("O saldo total do projeto é " + saldoTotal)
+    console.log("O saldo total do projeto é " + saldoTotal,"Reais")
 
     let desejaContinuar = prompt("Deseja continar fazendo execuções? s ou n")
     if (desejaContinuar != 's') {
